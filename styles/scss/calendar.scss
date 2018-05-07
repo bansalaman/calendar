@@ -1,0 +1,199 @@
+
+#cal {
+	border: $border solid $border-color;
+	box-shadow: $box $border-color;
+	font: 13px/1.5 "Helvetica Neue", Helvatica, Arial, san-serif;
+	display: table;
+	table {
+		background: $background-color;
+		border-collapse: collapse;
+		margin-bottom: $zero;
+	}
+	td {
+		color: $border-color;
+		width: $width + 4px;
+		height: $height;
+		line-height: $height;
+		text-align: center;
+		border: $border solid $border-color;
+		cursor: default;
+	}
+	#days {
+		td {
+			height: $height;
+			line-height: $height;
+			text-transform: uppercase;
+			font-size: 90%;
+			font-weight: bold;
+			&:not(:last-child) {
+				border-right: $border solid $background-color;
+			}
+		}
+	}
+	#cal-frame {
+		td.today {
+			background: $background-color;
+			color: $gray-color;
+		}
+		td {
+			&:not(.nil) {
+				&:hover {
+					color: $background-color;
+					text-shadow: $text-shadow-color;
+					background: $background-color-from;
+					background: -moz-linear-gradient(top, $background-color-from, $background-color-to);
+					background: -webkit-gradient(linear, left top, left bottom, $background-color-from,$background-color-to);
+				}
+			}
+			span {
+				font-size: 80%;
+				position: relative;
+				&:first-child {
+					bottom: 5px;
+				}
+				&:last-child {
+					top: 5px;
+				}
+			}
+			height: $height + 50px;
+		}
+		table.curr {
+			float: left;
+		}
+		table.temp {
+			float: left;
+		}
+		.curr {
+			tbody {
+				position: relative;
+				td {
+					padding: $zero;
+					text-align: left;
+					padding-left: $padding;
+				}
+			}
+		}
+	}
+}
+.calendar-section {
+	#days {
+		td{
+			border: $border solid $border-color !important;
+		  }
+		}
+	}
+
+.color-slots {
+	width: $width - 20px;
+	height: $height - 20px;
+}
+#wrap {
+	.header {
+		cursor: default;
+		position: relative;
+		section {
+			justify-content: flex-end;
+		}
+		span {
+			line-height: $height - 16px;
+		}
+		.button {
+			width: $width - 26px;
+			text-align: center;
+			button {
+				border-radius: $zero;
+				border: $border solid $box-shadow-color;
+				font-weight: bolder;
+			}
+		}
+		#label {
+			font-size: 1em;
+			font-weight: bolder;
+		}
+		.left.button {
+			padding-right: $zero;
+		}
+		.right.button {
+			padding-left: $zero;
+		}
+		.month-year {
+			letter-spacing: $border;
+			text-align: center;
+		}
+	}
+}
+.all-slots {
+	background-color: $all-slot-color;
+}
+.few-slots {
+	background-color: $few-slot-color;
+}
+.no-slots {
+	background-color: $no-slot-color;
+}
+.slots {
+	height: $height - 30px;
+}
+.slots-full {
+	color: $no-slot-color;
+}
+.slots-full-display {
+	color: $no-slot-color;
+	padding-left: $padding + 20px;
+	font-style: italic;
+}
+.modal-content {
+	width: 80%;
+}
+.modal-panelist {
+	padding-left: 10%;
+}
+.modal-checkbox-hiring {
+	display: hidden;
+}
+.edit-btn {
+	border-radius: $zero;
+	width: 65%;
+	margin-top: $margin + 5px;
+}
+.form-check-label {
+	margin-bottom: $margin;
+}
+.modal-hiring-details {
+	margin-bottom: $margin;
+}
+.nomination-update-modal{
+    background-color:$background-color; 
+}
+.nomination-update-header{
+    border-radius: $zero;
+    border: $box solid $gray-color;
+    background-color:$background-color;
+}
+.nomination-update-modal-body{
+    border:$box solid $gray-color;
+    border-top:none;
+    border-bottom:none;
+    margin-left: $zero;
+    margin-right: $zero;
+}
+.status{
+    font-size: 0.9em;
+}
+#nominationUpdateModal footer{
+    border:$box solid $gray-color;
+    border-top: none;
+    padding-top:$zero;
+}
+.modal-ok-btn{
+    border:$box solid $gray-color;
+    background: $background-color;
+    width: $width + 65px;
+    margin-right: $margin + 5px;
+    margin-bottom: $margin;
+}
+.info-btn{
+    border:$box solid $gray-color;
+    border-radius:50%;
+    width:$width + 30px;
+}

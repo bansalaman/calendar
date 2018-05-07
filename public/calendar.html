@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calendar Setup</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
+        crossorigin="anonymous"></script>
+</head>
+
+<body class="calendar">
+    <div class="container-fluid">
+        <header class="mt-5">
+            <section class="welcome-header d-flex ml-3">
+                <h1 class="welcome-user col-7 p-0">
+                    Welcome
+                    <span class="logged-in-username"> XYZ</span>
+                </h1>
+                <nav class="header-nav d-flex col-5 p-0">
+                    <a href="#" class="view-profile">View Profile</a>
+                    <a href="#" class="logout">Logout</a>
+                </nav>
+            </section>
+            <section class="page-nav-header ml-1 mt-2">
+                <nav>
+                    <a href="#" class="home-link pl-3">Home</a>
+                    <i class="fa fa-angle-right d-none"></i>
+                    <a href="#" class="dashboard-link d-none"></a>
+                    <i class="fa fa-angle-right d-none"></i>
+                    <a href="#" class="details-link d-none"></a>
+                </nav>
+            </section>
+        </header>
+        <main class="row pt-3 m-auto" id="wrap">
+            <header class="header col-12">
+                <div class="row">
+                    <h4 class="col-12 col-md-8 p-0">Calender Setup - Month View
+                        <span class="small">(Click on date block to view details)</span>
+                    </h4>
+                    <section class="col-md-2 offset-md-2 p-0">
+                        <section class="row">
+                            <span class=" col-2 p-0">
+                                <a href="#">Edit</a>
+                            </span>
+                            <span class="left button col-2 p-0" id="prev">
+                                <button class="btn btn-default"> &lang; </button>
+                            </span>
+                            <span class="right button col-1 p-0" id="next">
+                                <button class="btn btn-default"> &rang;</button>
+                            </span>
+                            <span class="month-year col-7 p-0" id="label"> June 20&0 </span>
+                        </section>
+                    </section>
+                </div>
+            </header>
+            <article class="calendar-section col-12 p-0" id="cal">
+                <table id="days" class="table">
+                    <td>sun</td>
+                    <td>mon</td>
+                    <td>tue</td>
+                    <td>wed</td>
+                    <td>thu</td>
+                    <td>fri</td>
+                    <td>sat</td>
+                </table>
+                <section id="cal-frame">
+                    <table class="curr table">
+                        <tbody>
+                            <tr>
+                                <td class="nil"></td>
+                                <td class="nil"></td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>7</td>
+                                <td>8</td>
+                                <td>9</td>
+                                <td>10</td>
+                                <td class="today">11</td>
+                                <td>12</td>
+                            </tr>
+                            <tr>
+                                <td>13</td>
+                                <td>14</td>
+                                <td>15</td>
+                                <td>16</td>
+                                <td>17</td>
+                                <td>18</td>
+                                <td>19</td>
+                            </tr>
+                            <tr>
+                                <td>20</td>
+                                <td>21</td>
+                                <td>22</td>
+                                <td>23</td>
+                                <td>24</td>
+                                <td>25</td>
+                                <td>26</td>
+                            </tr>
+                            <tr>
+                                <td>27</td>
+                                <td>28</td>
+                                <td>29</td>
+                                <td>30</td>
+                                <td class="nil"></td>
+                                <td class="nil"></td>
+                                <td class="nil"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </article>
+        </main>
+        <footer class="row m-auto">
+            <div class="col-4 col-sm-3 pl-0">
+                <span class="col-4 col-sm-5 all-slots"></span>
+                <span class="col-8 col-sm-7">All Slots Available</span>
+            </div>
+            <div class="col-4 col-sm-3 pl-0">
+                <span class="col-4 col-sm-5 few-slots"></span>
+                <span class="col-8 col-sm-7">Few Slots Available</span>
+            </div>
+            <div class="col-4 col-sm-3 pl-0">
+                <span class="col-4 col-sm-4 no-slots"></span>
+                <span class="col-8 col-sm-8">No Slots Available </span>
+            </div>
+        </footer>
+    </div>
+    <div class="container">
+        <!-- The Modal -->
+        <div class="modal fade" id="modal-hiring-team">
+            <div class="modal-dialog modal-dialog-centered">
+                <article class="modal-content border">
+                    <!-- Modal Header -->
+                    <section class="modal-header">
+                        <h5 class="modal-title">View Details -
+                            <span class="view-slot-date">10/Apr/2018</span>
+                        </h5>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </section>
+                    <!-- Modal body -->
+                    <section class="modal-body">
+                        <section class="modal-hiring-details to-clone">
+                            <span class="slot-timing">10:00 AM - 11:00 AM</span>
+                            <span class="panelist-email-id">deeratho@publicisgroupe.net</span>
+                        </section>
+                    </section>
+                    <footer>
+                        <button class="btn btn-primary edit-btn" style="margin-left:15%" data-dismiss="modal">Close</button>
+                    </footer>
+                </article>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <!-- The Modal -->
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog modal-dialog-centered">
+                <article class="modal-content border">
+                    <!-- Modal Header -->
+                    <section class="modal-header">
+                        <h5 class="modal-title">View and Nominate -
+                            <span class="view-slot-date">10/Apr/2018</span>
+                        </h5>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </section>
+                    <!-- Modal body -->
+                    <section class="modal-body modal-panelist">
+                        <form class="nominate-on-slots">
+                            <div class="form-check to-clone">
+                                <label class="form-check-label" for="">
+                                    <input type="checkbox" class="form-check-input" id="">
+                                    <span class="slot-timing">10:00 AM - 11:00 AM</span>
+                                    <span class="slot-full"></span>
+                                </label>
+                            </div>
+                        </form>
+                        <button class="btn btn-primary edit-btn" style="margin-left:15%">Nominate</button>
+                    </section>
+                </article>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <!-- The Modal -->
+        <div class="modal fade" id="nominationUpdateModal">
+            <div class="modal-dialog">
+                <div class="modal-content nomination-update-modal">
+
+                    <!-- Modal Header -->
+                    <header class="modal-header nomination-update-header">
+                        <h5 class="modal-title">Congratulations</h5>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </header>
+
+                    <!-- Modal body -->
+                    <main class="modal-body nomination-update-modal-body row">
+                        <figure class="col-2 p-0">
+                            <img src="../assets/info-symbol.png" alt="nomination send" width="50px">
+                        </figure>
+                        <p class="status col-10 p-0">Your nomination has been send. Please check
+                            <br>with the Hiring Team for more details.</p>
+                    </main>
+
+                    <!-- Modal footer -->
+                    <footer class="modal-footer">
+                        <button type="button" class="btn btn-default modal-ok-btn" data-dismiss="modal">OK</button>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

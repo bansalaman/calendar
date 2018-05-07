@@ -1,0 +1,44 @@
+/* global header */
+
+.welcome-user {
+    font-size: 16px;
+}
+
+.header-nav {
+    font-size: 11px;
+    justify-content: flex-end;
+    margin-top: 3px;
+}
+
+.header-nav a {
+    text-decoration: underline;
+    color: #00f;
+}
+
+.logout {
+    padding: 0 15px;
+}
+
+.page-nav-header {
+    height: 25px;
+    background: #0067B8;
+}
+
+.page-nav-layout {
+    color: #fff;
+    font-size: 12px;
+}
+
+.fa-angle-right {
+    color: #fff;
+    font-size: 12px;
+}
+
+@media screen and (min-width: 768px) {
+    .welcome-user {
+        font-size: 20px;
+    }
+    .header-nav {
+        margin-top: 7px;
+    }
+}

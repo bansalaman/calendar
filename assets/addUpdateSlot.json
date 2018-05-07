@@ -1,0 +1,26 @@
+{
+  "DatewiseSlots": [
+    {
+      "id": 1,
+      "Date": "17-04-2018",
+      "listOfSlots": [
+        {
+          "slotId": 6,
+          "startTime": "9:00 AM",
+          "endTime": "9:30 AM",
+          "empty": "no",
+          "emailAddress": "deeratho@publicisgroupe.net",
+          "candidateInfo": "yes"
+        },
+        {
+          "slotId": 7,
+          "startTime": "11:00 AM",
+          "endTime": "11:30 AM",
+          "empty": "no",
+          "emailAddress": "deeratho@publicisgroupe.net",
+          "candidateInfo": "no"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+
+{    "CalendarView":[
+                {
+                    "id": 1,
+                    "monthDetail": {
+                    "noSlots": [10, 11, 12, 13, 14, 16, 17, 23, 24, 28, 30],  
+                    "allAvailable": [19, 20, 25, 29],  
+                    "fewAvailable": [15, 22, 26], 
+                    "allFull": [18]  
+                    }
+                }]
+}

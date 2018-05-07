@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hello Handle bars</title>
+    <style type = "text/css">
+        .redText {color: red;}
+        .blueText {color: blue;}
+        .greenText {color: green}
+    </style>
+    <script src="../src/handlebars-v4.0.11.js"></script>
+</head>
+<body>
+    <div id="quoteData"></div>
+
+    <script id="quote-template" type="text/x-handlebars-template">
+        <h3>Favourite {{name}} Quotes</h3>
+        <ol>
+            {{#each quotes}}
+            <li>{{quote}}</li>
+            {{/each}}
+        </ol>
+
+        {{{yogiBio}}}<br /><br />
+
+        <!-- {{yogiBio}}<br /><br /> -->
+
+        {{makeLink "Aman Bansal" "http://amanbansal.org"}}<br /><br />
+
+        {{changeColor "Make my text blue" color="blue"}}<br /><br />
+
+        {{sayHello}}
+
+    </script>
+
+    <script type="text/javascript">
+        var quoteInfo = document.getElementById("quote-template").innerText;
+        console.log(document.getElementById("quote-template"));
+
+        var template = Handlebars.compile(quoteInfo);
+        
+        Handlebars.registerHelper("makeLink",function(text,url){
+            text = Handlebars.Utils.escapeExpression(text);
+            url = Handlebars.Utils.escapeExpression(url);
+
+            var theLink = '<a href=" + url + ">' + text + '</a>';
+
+            return new Handlebars.SafeString(theLink);
+        });
+
+        Handlebars.registerHelper("changeColor",function(text,options){
+            text = Handlebars.Utils.escapeExpression(text);
+            if(options.hash.color === "red"){
+                return new Handlebars.SafeString("<span class='redText'>" + text + "<span>");
+            }else if(options.hash.color === "blue"){
+                return new Handlebars.SafeString("<span class='blueText'>" + text + "<span>");
+            }else {
+                return new Handlebars.SafeString("<span class='greenText'>" + text + "<span>");
+            }
+        });
+
+        Handlebars.registerHelper("sayHello",function(options){
+            switch(options.data.lang){
+                case "english":
+                    return "returning english";
+                    break;
+                case "french":
+                    return "returning french";
+                    break;
+                default:
+                    return "returning default";
+            }
+        })
+        
+        var data = template({
+            name: "Aman Bansal",
+            quotes: [
+                {quote: "1st line hi hello hi hello hi hello hi hello hi hello"},
+                {quote: "2nd line 2nd line 2nd line 2nd line 2nd line 2nd line"},
+                {quote: "3rd line 3rd line 3rd line 3rd line 3rd line 3rd line"}
+            ],
+            yogiBio: '<i>lawrem ipsum lawrem ipsum lawrem ipsum lawrem ipsum lawrem ipsum</i>',
+            data:{
+                lang:"english"
+            }
+        })
+
+        document.getElementById("quoteData").innerHTML += data; 
+    </script>
+</body>
+</html>
